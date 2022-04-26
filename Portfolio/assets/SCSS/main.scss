@@ -11,8 +11,20 @@
   padding-left: 128px;
   padding-right: 128px;
 }
-
+section {
+  h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #313131;
+  }
+}
 .button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
   display: inline-block;
   color: #fff;
   background-color: #ff9fbd;
@@ -21,6 +33,10 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  cursor:  ;
+}
+img {
+  max-width: 100%;
 }
 header {
   color: #fff;
@@ -29,6 +45,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 99;
+  background-color: rgba(64, 39, 68, 0.8);
+
   .container {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -103,6 +121,134 @@ main {
         font-size: 36;
         font-weight: 400;
         margin-bottom: 32px;
+      }
+    }
+  }
+  .services {
+    background-color: #eee;
+    .container {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      h2 {
+        text-align: center;
+        margin-bottom: 32px;
+        text-transform: uppercase;
+        font-size: 36px;
+        color: #313131;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px;
+
+        .service {
+          background-color: #fff;
+          border-radius: 16px;
+          overflow: hidden;
+          .image-box {
+            display: block;
+            width: 100%;
+            border-bottom: #ff9fbd;
+            .img {
+              display: block;
+              width: 100%;
+              height: 128px;
+              object-fit: cover;
+            }
+          }
+          .content {
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+  .projects {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 16px;
+      padding-bottom: 32px;
+
+      .project {
+        background-image: url("../images/project-img.jpg");
+        border-radius: 16px;
+        overflow: hidden;
+        .content {
+          color: #fff;
+          padding: 16px;
+          background-color: rgba(64, 39, 68, 0.8);
+          opacity: 0;
+          transition: 0.4s;
+
+          h3 {
+            font-size: 30px;
+            margin-bottom: 16px;
+          }
+
+          p {
+            font-size: 16px;
+            margin-bottom: 16px;
+          }
+        }
+        &:hover {
+          .content {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .center {
+    text-align: center;
+  }
+
+  .contact {
+    background-color: #9b75d7;
+    .container {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      h2 {
+        color: #fff;
+      }
+      form {
+        display: block;
+        margin: 0 auto;
+        max-width: 680px;
+        .form-grid {
+          display: grid;
+          grid-gap: 16px;
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 16px;
+
+          .form-element,
+          .form-area {
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            color: #313131;
+
+            font-size: 20px;
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+          .form-area {
+            grid-column: 1/-1;
+          }
+        }
+        .right-align {
+          text-align: right;
+        }
       }
     }
   }
